@@ -9,45 +9,66 @@
 
 <body>
     <label for="name" class="label-1">Input 1</label>
-    <input type="Input 1" class="input-1">
+    <input type="number" class="input-1">
     <label for="name" class="label-2">Input 2</label>
-    <input type="Input 2" class="input-2">
+    <input type="number" class="input-2">
 
-    <p class="result-area"></p>
+    <p class="result"></p>
 
-    <button class="calc-area">
-        Calc Area
-    </button>
-
-    <button class="calc-perimeter">
-        Calc perimeter
-    </button>
+    <button class="calc-area">Calc Area</button>
+    <button class="calc-perimeter">Calc perimeter</button>
+    <button class="calc-average">Calc Average</button>
+    <button class="calc-BMI">Calc BMI</button>
+    <button class="calc-minutes">Calc minutes</button>
+    <button class="calc-max-value">Find Max value</button>
 
     <script>
-        const input1 = document.querySelector('.input-1')
-        const input2 = document.querySelector('.input-2')
+        const input1 = document.querySelector(".input-1");
+        const input2 = document.querySelector(".input-2");
+        const result = document.querySelector(".result");
 
-
-        // label
-        const resultArea = document.querySelector('.result-area')
-        const resultPerimeter = document.querySelector('.result-perimeter')
         // button
+        const calcArea = document.querySelector(".calc-area")
+        const calcPerimeter = document.querySelector(".calc-perimeter")
+        const calcAverage = document.querySelector(".calc-average")
+        const calcBMI = document.querySelector(".calc-BMI")
+        const calcMinutes = document.querySelector(".calc-minutes")
+        const calcMaxValue = document.querySelector(".calc-max-value")
 
-        // calc Area
-        const calcArea = document.querySelector('.calc-area')
-        calcArea.addEventListener('click', () => {
-            const result = input1.value * input2.value
-            resultArea.textContent = `calculated area is ${result}`
+        // calc area
+        calcArea.addEventListener("click", () => {
+            const result = input1.value * input2.value;
+            console.log(result);
+            result.textContent = `calculated Area is ${result}`;
         })
 
         // calc perimeter
-        const calcPerimeter = document.querySelector('.calc-perimeter')
-        calcPerimeter.addEventListener('click', () => {
-            const result = (input1.value + input2.value) * 2
-            resultPerimeter.textContent = `calculated area is ${result}`
+        calcPerimeter.addEventListener("click", () => {
+            const result = (input1.value + input2.value) * 2;
+            console.log(result);
+            result.textContent = `calculated perimeter is ${result}`;
         })
 
+        // calc average
+        calcAverage.addEventListener("click", () => {
+            const result = (input1.value + input2.value) / 2;
+            console.log(result);
+            result.textContent = `calculated average is ${result}`;
+        })
 
+        // calc BMI
+        calcBMI.addEventListener("click", () => {
+            const result = (input1.value + input2.value) / 2;
+            console.log(result);
+            result.textContent = `calculated average is ${result}`;
+        })
+
+        // find max value
+        calcMaxValue.addEventListener("click", () => {
+            const result = Math.max(input1.value, input2.value);
+            console.log(result);
+            result.textContent = `Max value is ${result}`;
+        })
 
     </script>
 </body>
