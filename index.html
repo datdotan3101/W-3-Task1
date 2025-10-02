@@ -26,6 +26,9 @@
     <script>
         const input1 = document.querySelector('.input-1')
         const input2 = document.querySelector('.input-2')
+
+
+        // label
         const resultArea = document.querySelector('.result-area')
         const resultPerimeter = document.querySelector('.result-perimeter')
         // button
@@ -34,9 +37,15 @@
         const calcArea = document.querySelector('.calc-area')
         calcArea.addEventListener('click', () => {
             const result = input1.value * input2.value
-            resultArea.textContent = result
+            resultArea.textContent = `calculated area is ${result}`
         })
 
+        // calc perimeter
+        const calcPerimeter = document.querySelector('.calc-perimeter')
+        calcPerimeter.addEventListener('click', () => {
+            const result = (input1.value + input2.value) * 2
+            resultPerimeter.textContent = `calculated area is ${result}`
+        })
 
 
 
