@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name" class="label-1">Input 1</label>
+    <input type="Input 1" class="input-1">
+    <label for="name" class="label-2">Input 2</label>
+    <input type="Input 2" class="input-2">
+
+    <p class="result-area"></p>
+
+    <button class="calc-area">
+        Calc Area
+    </button>
+
+    <button class="calc-perimeter">
+        Calc perimeter
+    </button>
+
+    <script>
+        const input1 = document.querySelector('.input-1')
+        const input2 = document.querySelector('.input-2')
+        const resultArea = document.querySelector('.result-area')
+        const resultPerimeter = document.querySelector('.result-perimeter')
+        // button
+
+        // calc Area
+        const calcArea = document.querySelector('.calc-area')
+        calcArea.addEventListener('click', () => {
+            const result = input1.value * input2.value
+            resultArea.textContent = result
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
